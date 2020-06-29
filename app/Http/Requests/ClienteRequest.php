@@ -48,11 +48,11 @@ class ClienteRequest extends FormRequest
     public function messages()
     {
         return [
-            'cedula.required' => 'La cedula es requerida',
-            'cedula.max' =>'La cedula no puede ser mayor a :max caracteres.',
-            'nombre.required' => 'El nombre es requerido',
-            'nombre.max' =>'El nombre no puede ser mayor a :max caracteres.',
-            'cedula.unique' => 'la cedula ya existe'
+            
+            'required' => ':attribute es requerido.',
+            'max' => ':attribute debe ser menor a :max caracteres.',
+            'unique' => ':attribute ya esta en uso.',   
+            
         ];
     }
 }

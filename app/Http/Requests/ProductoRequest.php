@@ -38,9 +38,9 @@ class ProductoRequest extends FormRequest
     public function rules()
     {
         return [
-            'nombre' => 'required|max:50|unique:clientes',
-            'cantidad' => 'required|max:50',
-            'precio' => 'nullable',
+            'nombre' => 'required|max:50|unique:productos',
+            'cantidad' => 'required|max:50|numeric',
+            'precio' => 'nullable|numeric',
             'descripcion' => 'nullable'
         ];
     }
@@ -48,8 +48,10 @@ class ProductoRequest extends FormRequest
     public function messages()
     {
         return [
-            'nombre.required' => 'El nombre es requerido',
-            'nombre.max' =>'El nombre no puede ser mayor a :max caracteres.',
+            'required' => ':attribute es requerido.',
+            'max' => ':attribute debe ser menor a :max caracteres.',
+            'unique' => ':attribute ya esta en uso.',
+            'numeric' => ':attribute debe ser numerico.',
         ];
     }
 }

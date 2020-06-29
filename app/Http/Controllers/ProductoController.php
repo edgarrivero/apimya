@@ -32,7 +32,7 @@ class ProductoController extends Controller
 
             $produc = new Producto($request->all());
             $produc->save();
-            return response()->json('Producto Creado', 200);
+            return response()->json($produc, 200);
 
         }catch (\Exception $ex){
             return response()->json($ex->getMessage(), 402);

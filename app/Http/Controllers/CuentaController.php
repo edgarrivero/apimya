@@ -37,7 +37,7 @@ class CuentaController extends Controller
 
             $cuentas = new Cuenta($request->all());
             $cuentas->save();
-            return response()->json('Cuenta Creada', 200);
+            return response()->json($cuentas, 200);
 
         }catch (\Exception $ex){
             return response()->json($ex->getMessage(), 402);

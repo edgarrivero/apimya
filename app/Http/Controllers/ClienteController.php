@@ -34,7 +34,7 @@ class ClienteController extends Controller
 
             $cliente = new Cliente($request->all());
             $cliente->save();
-            return response()->json('Cliente Creado', 200);
+            return response()->json($cliente, 200);
 
         }catch (\Exception $ex){
             return response()->json($ex->getMessage(), 402);
@@ -59,7 +59,7 @@ class ClienteController extends Controller
      * @param  \App\Cliente  $cliente
      * @return \Illuminate\Http\Response
      */
-    public function update(ClienteRequest $request, Cliente $cliente)
+    public function update(Request $request, Cliente $cliente)
     {
         try {
             Rule::unique('clientes')->ignore($cuenta->cedula);

@@ -48,9 +48,9 @@ class CuentaRequest extends FormRequest
     public function messages()
     {
         return [
-            'required' => 'El :attribute es requerido.',
-            'numeric' => 'El :attribute debe ser numerico.',
-            'unique' => 'El :attribute ya esta en uso.',          
+            'required' => ':attribute es requerido.',
+            'numeric' => ':attribute debe ser numerico.',
+            'unique' => ':attribute ya esta en uso.',          
         ];
     }
 }

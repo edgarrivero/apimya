@@ -47,9 +47,8 @@ class DetFacturaRequest extends FormRequest
     public function messages()
     {
         return [
-            'pago.required' => 'El Pago es requerido',
-            'factura_id.required' => 'El codigo de Factura es requerido',
-            'producto_id.required' => 'El codigo de Producto es requerido',
+            'required' => ':attribute es requerido.',
+            
         ];
     }
 }

@@ -47,9 +47,9 @@ class FacturaRequest extends FormRequest
     public function messages()
     {
         return [
-            'num_factura.required' => 'El codigo de Factura es requerida',
-            'num_factura.max' =>'La Factura no puede ser mayor a :max caracteres.',
-            'cliente_id.required' => 'El cliente es requerido',
+            'required' => ':attribute es requerido.',
+            'max' => ':attribute debe ser menor a :max caracteres.',
+            'unique' => ':attribute ya esta en uso.',   
         ];
     }
 }
