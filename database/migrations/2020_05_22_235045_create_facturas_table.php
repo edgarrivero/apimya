@@ -16,7 +16,7 @@ class CreateFacturasTable extends Migration
         Schema::create('facturas', function (Blueprint $table) {
             $table->id();
 
-            $table->string('num_factura')->unique()->required();
+            $table->string('num_factura',30)->unique()->required();
             $table->string('pago')->required();
             $table->bigInteger('cliente_id')->unsigned()->required();
             

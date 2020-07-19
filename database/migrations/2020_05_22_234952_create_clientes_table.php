@@ -16,12 +16,12 @@ class CreateClientesTable extends Migration
         Schema::create('clientes', function (Blueprint $table) {
             $table->id();
 
-            $table->string('cedula')->unique()->required();
+            $table->string('cedula',30)->unique()->required();
             $table->string('nombre')->required();
             $table->string('tlf')->nullable();
             $table->string('tlf2')->nullable();
             $table->string('tlf_pago_movil')->nullable();
-            $table->string('correo')->unique()->nullable();
+            $table->string('correo',30)->unique()->nullable();
             $table->string('pass_correo')->nullable();
 
             $table->timestamps();

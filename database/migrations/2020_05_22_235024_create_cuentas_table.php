@@ -16,8 +16,8 @@ class CreateCuentasTable extends Migration
         Schema::create('cuentas', function (Blueprint $table) {
             $table->id();
 
-            $table->string('num_cuenta')->unique()->required();
-            $table->string('num_tarjeta')->unique()->nullable();
+            $table->string('num_cuenta',30)->unique()->required();
+            $table->string('num_tarjeta',30)->unique()->nullable();
             $table->string('banco')->nullable();
             $table->string('tipo_cuenta')->nullable();
             $table->string('num_seguridad')->nullable();
